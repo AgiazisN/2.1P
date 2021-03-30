@@ -1,0 +1,83 @@
+#include "Particle.h"
+int led1 = D7; 
+int led2 = D6;
+SYSTEM_THREAD(ENABLED);
+
+
+
+void setup()
+{
+    pinMode(led1, OUTPUT);
+    pinMode(led2, OUTPUT);
+    
+
+ }
+
+
+void dot()
+{
+
+    digitalWrite(led1, HIGH);
+    digitalWrite(led2, HIGH);
+    
+    delay(100);
+    
+    digitalWrite(led1, LOW);
+    digitalWrite(led2, LOW);
+    
+    
+
+}
+
+
+void dash()
+{
+
+    digitalWrite(led1, HIGH);
+    digitalWrite(led2, HIGH);
+    
+    delay(300);
+    
+    digitalWrite(led1, LOW);
+    digitalWrite(led2, LOW);
+    
+    
+
+}
+
+
+void loop()
+{
+    //N
+    dash();
+    delay(300);
+    dot();
+    delay(300);
+    
+    //I
+    dot();
+    delay(300);
+    dot();
+    delay(700);
+    
+    //C
+    dash();
+    delay(300);
+    dot();
+    delay(300);
+    dash();
+    delay(300);
+    dot();
+    delay(300);
+    
+    //K
+    dash();
+    delay(300);
+    dot();
+    delay(300);
+    dash();
+    delay(300);
+    
+    delay(700);
+    
+}
